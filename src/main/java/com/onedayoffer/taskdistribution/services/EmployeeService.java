@@ -88,6 +88,7 @@ public class EmployeeService {
         Type listType = new TypeToken<Task>() {
         }.getType();
         Task task = modelMapper.map(newTask, listType);
+        task.setEmployee(employee.get());
         employee.get().getTasks().add(task);
     }
 }

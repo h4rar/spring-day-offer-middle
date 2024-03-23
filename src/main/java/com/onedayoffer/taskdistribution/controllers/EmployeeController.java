@@ -43,7 +43,7 @@ public class EmployeeController {
 
     @PostMapping("{id}/tasks")
     @ResponseStatus(HttpStatus.CREATED)
-    public void postNewTask(@PathVariable Integer id,  @RequestParam TaskDTO dto) {
+    public void postNewTask(@PathVariable Integer id,  @RequestBody TaskDTO dto) {
         employeeService.postNewTask(id, dto);
     }
 }
