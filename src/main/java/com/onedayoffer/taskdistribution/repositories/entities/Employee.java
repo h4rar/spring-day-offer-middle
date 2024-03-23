@@ -19,7 +19,7 @@ public class Employee {
     @Column(nullable = false)
     private String jobTitle;
 
-    @OneToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(cascade=CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     @JoinColumn(name = "employee_id")
     private List<Task> tasks = new ArrayList<>();
 

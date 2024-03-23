@@ -1,12 +1,13 @@
 package com.onedayoffer.taskdistribution.DTO;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.extern.jackson.Jacksonized;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Jacksonized
+@Builder
 public class TaskDTO {
     private Integer id;
     private String name;
